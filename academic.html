@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Academics</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+    .header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .subject {
+        margin-bottom: 30px;
+    }
+    .subject h2 {
+        color: #4CAF50;
+    }
+    .subject img {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .subject img:hover {
+        transform: scale(1.1);
+    }
+    .subject p {
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>School Academics</h1>
+    <p>Welcome to our colorful world of learning!</p>
+</div>
+
+<div class="container">
+    <div class="subject">
+        <h2>Mathematics</h2>
+        <img src="math.jpg" alt="Mathematics" onclick="showDetails('math')">
+        <p>Explore the beauty of numbers and problem-solving.</p>
+    </div>
+    <div class="subject">
+        <h2>Science</h2>
+        <img src="science.jpg" alt="Science" onclick="showDetails('science')">
+        <p>Discover the wonders of the natural world through experimentation and observation.</p>
+    </div>
+    <div class="subject">
+        <h2>History</h2>
+        <img src="history.jpg" alt="History" onclick="showDetails('history')">
+        <p>Uncover the rich tapestry of human civilization and learn from the lessons of the past.</p>
+    </div>
+</div>
+
+<div id="modal" style="display: none;">
+    <div id="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script>
+    function showDetails(subject) {
+        var modal = document.getElementById('modal');
+        var modalTitle = document.getElementById('modal-title');
+        var modalBody = document.getElementById('modal-body');
+
+        if (subject === 'math') {
+            modalTitle.textContent = 'Mathematics';
+            modalBody.innerHTML = '<p>Mathematics is the study of numbers, quantities, shapes, and patterns. It plays a crucial role in various fields such as science, engineering, and economics.</p><p>Key topics include algebra, geometry, calculus, and statistics.</p>';
+        } else if (subject === 'science') {
+            modalTitle.textContent = 'Science';
+            modalBody.innerHTML = '<p>Science is the systematic study of the natural world through observation and experimentation. It encompasses various disciplines such as biology, chemistry, physics, and earth sciences.</p><p>Science helps us understand how the world works and enables technological advancements.</p>';
+        } else if (subject === 'history') {
+            modalTitle.textContent = 'History';
+            modalBody.innerHTML = '<p>History is the study of past events, societies, and civilizations. It provides insights into human behavior, cultures, and the development of societies over time.</p><p>Key topics include ancient civilizations, world wars, revolutions, and cultural movements.</p>';
+        }
+
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

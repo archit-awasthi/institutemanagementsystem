@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #F08080;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .facilities {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admission Form</h1>
+    </header>
+    <form>
+        <label for="child_name">Child's Name:</label>
+        <input type="text" id="child_name" name="child_name" required>
+        
+        <label for="parent_email">Parent's Email:</label>
+        <input type="email" id="parent_email" name="parent_email" required>
+        
+        <label for="class">Class Applying For:</label>
+        <select id="class" name="class">
+            <option value="nursery">Nursery</option>
+            <option value="kindergarten">Kindergarten</option>
+            <option value="first_grade">First Grade</option>
+            <!-- Add more options as needed -->
+        </select>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="facilities">
+        <h2>Facilities Provided in Our School</h2>
+        <p>We provide a nurturing environment for your child's development.</p>
+        <p>Our facilities include:</p>
+        <ul>
+            <li>State-of-the-art classrooms</li>
+            <li>Interactive learning materials</li>
+            <li>Extracurricular activities</li>
+            <li>Outdoor playground</li>
+            <!-- Add more facilities as needed -->
+        </ul>
+        <p>Join us and give your child the best education experience!</p>
+    </div>
+</body>
+</html>
